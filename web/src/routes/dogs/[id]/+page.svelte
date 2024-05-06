@@ -1,9 +1,10 @@
 <script lang="ts">
     import type { PageServerData } from './$types';
-    import { IconGenderMale, IconGenderFemale, IconPaw } from '@tabler/icons-svelte';
+    import { IconGenderMale, IconGenderFemale, IconPaw, IconUser, IconExternalLink, IconId, IconOld, IconChevronLeft } from '@tabler/icons-svelte';
+    import { goto } from "$app/navigation";
 
     export let data: PageServerData;
-    $: ({ dog } = data);
+    $: ({ dog, owner } = data);
 
     function sexIcon(male: boolean) {
         return male ? IconGenderMale : IconGenderFemale;
@@ -23,19 +24,31 @@
     }
 </script>
 
-<main class="relative w-full h-full flex flex-col px-5">
-    <h1>Dog data</h1>
-    <div class="relative w-full sm:w-60 p-5 flex flex-col gap-3 rounded-lg border border-gray-700">
-        <div class="flex flex-col gap-1">
-            <div class="flex justify-between gap-5">
-                <h2 class="text-xl">{dog.nom}</h2>
-                <svelte:component this={sexIcon(dog.male)} />
-            </div>
-            <span class="text-sm text-gray-500">{age(dog.dateNaissance)}</span>
-        </div>
-        <div class="text-gray-500 flex gap-[10px]">
-            <IconPaw class="size-6" />
-            <span>{dog.race}</span>
-        </div>
+<main class="relative w-full h-full flex flex-col justify-start items-start gap-5 px-5">
+    <button on:click={() => history.back()} class="flex gap-5">
+        <IconChevronLeft />
+        <span>Back</span>
+    </button>
+    <div class="flex justify-between gap-5">
+        <h2 class="text-xl">{dog.nom}</h2>
+        <svelte:component this={sexIcon(dog.male)} />
+    </div>
+    <div class="text-gray-500 flex gap-5">
+        <IconOld class="size-6" />
+        <span>Currently {age(dog.dateNaissance)}</span>
+    </div>
+    <div class="text-gray-500 flex gap-5">
+        <IconId class="size-6" />
+        <span>{dog.identificationAmicus}</span>
+    </div>
+    <div class="text-gray-500 flex gap-5">
+        <IconPaw class="size-6" />
+        <span>{dog.race}</span>
+    </div>
+    <div class="text-gray-500 flex gap-5">
+        <IconUser class="size-6" />
+        <button on:click={() => goto(`/owners/${owner._id}`)} class="flex justify-between items-center gap-5">
+            Owned by {owner.prenom} {owner.nom} <IconExternalLink />
+        </button>
     </div>
 </main>

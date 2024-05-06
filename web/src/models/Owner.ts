@@ -5,8 +5,10 @@ import type { Phone } from './Phone';
 export interface Owner {
     _id: string;
     adresse: string;
-    certificatDelivre: Date | null;
-    dateNaissance: Date;
+    /** A parsable date. */
+    certificatDelivre: string | null;
+    /** A parsable date. */
+    dateNaissance: string;
     nom: string;
     origine: string;
     prenom: string;
