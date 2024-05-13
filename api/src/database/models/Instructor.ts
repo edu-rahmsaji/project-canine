@@ -2,16 +2,13 @@ import mongoose from "mongoose";
 import { mailSchema } from "./Mail";
 import { phoneSchema } from "./Phone";
 
-const ownerSchema = new mongoose.Schema(
+const instructorSchema = new mongoose.Schema(
     {
         adresse: String,
-        certificatDelivre: {
-            type: Date,
-            required: false,
-        },
+        civilite: String,
         dateNaissance: Date,
+        ecoleId: mongoose.Schema.ObjectId,
         nom: String,
-        origine: String,
         prenom: String,
         localite: {
             localite: String,
@@ -20,7 +17,7 @@ const ownerSchema = new mongoose.Schema(
         mails: [mailSchema],
         telephones: [phoneSchema],
     },
-    { collection: "proprietaire", versionKey: false }
+    { collection: "moniteur", versionKey: false }
 );
 
-export const Owner = mongoose.model("Owner", ownerSchema);
+export const Instructor = mongoose.model("Instructor", instructorSchema);
