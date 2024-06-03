@@ -3,6 +3,7 @@ import { Router } from "express";
 import mongoose from "mongoose";
 import { Session } from "../database/models/Session";
 import { Dog } from "../database/models/Dog";
+import { Owner } from "../database/models/Owner";
 
 const ObjectId = mongoose.mongo.ObjectId;
 
@@ -13,16 +14,22 @@ router.get("/unwind", async (req, res) => {
     return res.status(200).send(sessions);
 });
 
-router.get("/match-lookup", async (req, res) => {
+router.get("/match", async (req, res) => {
+    const dogs = await Dog.aggregate().match({ race: "Teckel" }).exec();
+    return res.status(200).send(dogs);
+});
+
+router.get("/lookup", async (req, res) => {
     const dogs = await Dog.aggregate()
-        .match({ proprietaireId: new ObjectId("665d660575e75d02ac309ce1") })
         .lookup({
-            from: "owners",
+            pipeline: [
+                // @ts-ignore
+                { $documents: await Owner.find() },
+            ],
             localField: "proprietaireId",
             foreignField: "_id",
-            as: "owners"
+            as: "owner"
         }).exec();
-    console.log(dogs)
     return res.status(200).send(dogs)
 });
 
