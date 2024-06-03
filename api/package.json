@@ -1,11 +1,13 @@
 {
   "name": "api",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.ts",
   "type": "module",
   "scripts": {
-    "start": "nodemon --exec \"node --import ./ts-loader.js\" --experimental-specifier-resolution=node src/app.ts"
+    "dev": "nodemon --exec \"node --import ./ts-loader.js\" --experimental-specifier-resolution=node src/app.ts",
+    "docker:start": "docker build -t api-image . & docker run -d  -p 4000:4000 --name my-api api-image",
+    "docker:stop": "docker rm -f my-api & docker rmi api-image"
   },
   "keywords": [],
   "author": "",

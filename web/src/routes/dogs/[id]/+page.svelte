@@ -1,6 +1,13 @@
 <script lang="ts">
     import type { PageServerData } from './$types';
-    import { IconGenderMale, IconGenderFemale, IconPaw, IconUser, IconExternalLink, IconId, IconOld, IconChevronLeft } from '@tabler/icons-svelte';
+    import IconGenderMale from '@tabler/icons-svelte/IconGenderMale.svelte';
+    import IconGenderFemale from '@tabler/icons-svelte/IconGenderFemale.svelte';
+    import IconPaw from '@tabler/icons-svelte/IconPaw.svelte';
+    import IconUser from '@tabler/icons-svelte/IconUser.svelte';
+    import IconExternalLink from '@tabler/icons-svelte/IconExternalLink.svelte';
+    import IconId from '@tabler/icons-svelte/IconId.svelte';
+    import IconOld from '@tabler/icons-svelte/IconOld.svelte';
+    import IconChevronLeft from '@tabler/icons-svelte/IconChevronLeft.svelte';
     import { goto } from "$app/navigation";
 
     export let data: PageServerData;

@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "665d660575e75d02ac309cdd"
+  },
+  "adresse": "Les mauriette 9",
+  "certificatDelivre": null,
+  "dateNaissance": {
+    "$date": "1970-12-04T00:00:00.000Z"
+  },
+  "nom": "Porcher",
+  "origine": "Sion",
+  "prenom": "Denis",
+  "localite": {
+    "localite": "Sion",
+    "npa": 1950
+  },
+  "mails": [
+    {
+      "mail": "denis@hotmail.com",
+      "type": "Privé"
+    }
+  ],
+  "telephones": [
+    {
+      "numero": "+41 78 901 74 29",
+      "type": "Mobile"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "665d660575e75d02ac309cde"
+  },
+  "adresse": "Forêt des arbres 11",
+  "certificatDelivre": {
+    "$date": "2021-01-01T00:00:00.000Z"
+  },
+  "dateNaissance": {
+    "$date": "2002-01-30T00:00:00.000Z"
+  },
+  "nom": "Barre",
+  "origine": "Sierre",
+  "prenom": "Claire",
+  "localite": {
+    "localite": "Sion",
+    "npa": 1950
+  },
+  "mails": [
+    {
+      "mail": "claire@hotmail.com",
+      "type": "Privé"
+    }
+  ],
+  "telephones": [
+    {
+      "numero": "+41 77 289 22 93",
+      "type": "Mobile"
+    }
+  ]
+}]

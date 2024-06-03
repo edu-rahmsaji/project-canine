@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "665d660575e75d02ac309cd4"
+  },
+  "dateNaissance": {
+    "$date": "2010-09-05T00:00:00.000Z"
+  },
+  "identificationAmicus": "97352",
+  "male": false,
+  "nom": "Jodelle",
+  "proprietaireId": {
+    "$oid": "665d660575e75d02ac309cdd"
+  },
+  "race": "Teckel"
+},
+{
+  "_id": {
+    "$oid": "665d660575e75d02ac309cd5"
+  },
+  "dateNaissance": {
+    "$date": "2023-08-01T00:00:00.000Z"
+  },
+  "identificationAmicus": "14778",
+  "male": true,
+  "nom": "Rex",
+  "proprietaireId": {
+    "$oid": "665d660575e75d02ac309cde"
+  },
+  "race": "Bulldog"
+},
+{
+  "_id": {
+    "$oid": "665d660575e75d02ac309cd6"
+  },
+  "dateNaissance": {
+    "$date": "2020-02-10T00:00:00.000Z"
+  },
+  "identificationAmicus": "15472",
+  "male": false,
+  "nom": "Adela",
+  "proprietaireId": {
+    "$oid": "665d660575e75d02ac309cde"
+  },
+  "race": "Labrador"
+}]

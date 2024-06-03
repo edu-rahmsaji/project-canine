@@ -3,6 +3,8 @@ import { Dog } from "../database/models/Dog";
 import mongoose from "mongoose";
 import { Owner } from "../database/models/Owner";
 
+const ObjectId = mongoose.mongo.ObjectId;
+
 export const router = Router();
 
 router.get("/", async (req, res) => {
@@ -11,8 +13,13 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/:id", async (req, res) => {
-    const dog = (await Dog.find({ _id: new mongoose.mongo.ObjectId(req.params.id) })).at(0);
-    return res.status(200).send({ success: true, message: "Dog retrieved successfully", data: dog })
+    try {
+        const dog = await Dog.findById(new ObjectId(req.params.id));
+        return res.status(200).send({ success: true, message: "Dog retrieved successfully", data: dog })
+    } catch (err) {
+        console.log(`An error occurred whilst retrieving a a dog : ${err.message}`);
+        return res.status(500).send({ success: false, message: "Internal Server Error" });
+    }
 });
 
 router.get("/:id/owner", async (req, res) => {

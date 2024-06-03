@@ -1,0 +1,76 @@
+[{
+  "_id": {
+    "$oid": "665d660575e75d02ac309cda"
+  },
+  "adresse": "Chemin du chemin 12",
+  "civilite": "Monsieur",
+  "dateNaissance": {
+    "$date": {
+      "$numberLong": "-2926024214000"
+    }
+  },
+  "ecoleId": {
+    "$oid": "665d660575e75d02ac309cd8"
+  },
+  "nom": "Méraud",
+  "prenom": "Abel",
+  "localite": {
+    "localite": "Sion",
+    "npa": 1950
+  },
+  "mails": [
+    {
+      "type": "b257e101-721e-409e-94bb-db4c79de88f6",
+      "mail": "75e9306d-c172-4f5a-bd6f-a67c0e4a56ab"
+    }
+  ],
+  "telephones": [
+    {
+      "type": "1eaeb30c-c63e-4722-b5ed-71fbc29d122c",
+      "numero": "75e9306d-c172-4f5a-bd6f-a67c0e4a56ab"
+    },
+    {
+      "type": "d663b299-5443-4b26-bc8c-a3ff8b3df9ea",
+      "numero": "75e9306d-c172-4f5a-bd6f-a67c0e4a56ab"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "665d660575e75d02ac309cdb"
+  },
+  "adresse": "Avenue des bouquins 1",
+  "civilite": "Madame",
+  "dateNaissance": {
+    "$date": "1997-06-28T00:00:00.000Z"
+  },
+  "ecoleId": {
+    "$oid": "665d660575e75d02ac309cd8"
+  },
+  "nom": "Daviau",
+  "prenom": "Camille",
+  "localite": {
+    "localite": "Sion",
+    "npa": 1950
+  },
+  "mails": [
+    {
+      "type": "5389cded-fbc8-41a0-b38f-de6b324f2172",
+      "mail": "882d2b59-c584-4a1a-9aad-08375a9db171"
+    },
+    {
+      "type": "8d47c06f-98f8-4345-b541-2948ba4b3643",
+      "mail": "882d2b59-c584-4a1a-9aad-08375a9db171"
+    }
+  ],
+  "telephones": [
+    {
+      "type": "2875d084-b303-4232-b171-7b4cae133ee7",
+      "numero": "882d2b59-c584-4a1a-9aad-08375a9db171"
+    },
+    {
+      "type": "157792b4-11e5-4c5a-851b-c69e85aa0bd0",
+      "numero": "882d2b59-c584-4a1a-9aad-08375a9db171"
+    }
+  ]
+}]

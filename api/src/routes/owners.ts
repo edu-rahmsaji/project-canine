@@ -11,8 +11,13 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/:id", async (req, res) => {
-    const owner = await Owner.findById(new mongoose.mongo.ObjectId(req.params.id));
-    return res.status(200).send({ success: true, data: owner })
+    try {
+        const owner = await Owner.findById(new mongoose.mongo.BSON.ObjectId(req.params.id));
+        return res.status(200).send({ success: true, data: owner })
+    } catch (err) {
+        console.log(`An error occurred whilst retrieving an owner : ${err.message}`);
+        return res.status(500).send({ success: false, message: "Internal Server Error" });
+    }
 });
 
 router.post("/", async (req, res) => {

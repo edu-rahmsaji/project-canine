@@ -1,7 +1,10 @@
 <script lang="ts">
     import '../app.css';
     import { fly } from 'svelte/transition';
-    import { IconMenu, IconX, IconDog, IconHome } from '@tabler/icons-svelte';
+    import IconMenu from '@tabler/icons-svelte/IconMenu.svelte';
+    import IconX from '@tabler/icons-svelte/IconX.svelte';
+    import IconDog from '@tabler/icons-svelte/IconDog.svelte';
+    import IconHome from '@tabler/icons-svelte/IconHome.svelte';
     import Container from '../lib/components/Toast/Container.svelte';
 
     let showMenu = false;

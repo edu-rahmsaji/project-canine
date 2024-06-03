@@ -1,8 +1,6 @@
 import mongoose from 'mongoose';
-import dotenv from "dotenv";
 
-dotenv.config();
-
-(async function main() {
-    await mongoose.connect(process.env.DB_URI!);
-})();
+mongoose
+    .connect(process.env.DB_URI! ?? "mongodb://localhost:27017/cours_canin")
+    .then(() => console.log('Connected to MongoDB'))
+    .catch((err) => console.log(err));

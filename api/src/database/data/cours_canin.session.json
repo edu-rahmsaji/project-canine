@@ -1,0 +1,160 @@
+[{
+  "_id": {
+    "$oid": "665d660575e75d02ac309ce0"
+  },
+  "date": {
+    "$date": "2024-04-01T00:00:00.000Z"
+  },
+  "dureeM": 180,
+  "moniteurId": {
+    "$oid": "665d660575e75d02ac309cdb"
+  },
+  "places": 5,
+  "cours": {
+    "niveau": "Adulte",
+    "tarif": 20,
+    "type": "Groupe"
+  },
+  "participations": [
+    {
+      "chienId": {
+        "$oid": "665d660575e75d02ac309cd4"
+      },
+      "avecProprietaire": false
+    },
+    {
+      "chienId": {
+        "$oid": "665d660575e75d02ac309cd5"
+      },
+      "avecProprietaire": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "665d660575e75d02ac309ce1"
+  },
+  "date": {
+    "$date": "2024-03-12T00:00:00.000Z"
+  },
+  "dureeM": 180,
+  "moniteurId": {
+    "$oid": "665d660575e75d02ac309cdb"
+  },
+  "places": 5,
+  "cours": {
+    "niveau": "Chiot",
+    "tarif": 15,
+    "type": "Groupe"
+  },
+  "participations": [
+    {
+      "chienId": {
+        "$oid": "665d660575e75d02ac309cd4"
+      },
+      "avecProprietaire": true
+    },
+    {
+      "chienId": {
+        "$oid": "665d660575e75d02ac309cd5"
+      },
+      "avecProprietaire": true
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "665d660575e75d02ac309ce2"
+  },
+  "date": {
+    "$date": "2024-04-05T00:00:00.000Z"
+  },
+  "dureeM": 180,
+  "moniteurId": {
+    "$oid": "665d660575e75d02ac309cdb"
+  },
+  "places": 5,
+  "cours": {
+    "niveau": "Chiot",
+    "tarif": 15,
+    "type": "Groupe"
+  },
+  "participations": [
+    {
+      "chienId": {
+        "$oid": "665d660575e75d02ac309cd5"
+      },
+      "avecProprietaire": true
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "665d660575e75d02ac309ce3"
+  },
+  "date": {
+    "$date": "2024-01-01T00:00:00.000Z"
+  },
+  "dureeM": 180,
+  "moniteurId": {
+    "$oid": "665d660575e75d02ac309cda"
+  },
+  "places": 5,
+  "cours": {
+    "niveau": "Ado",
+    "tarif": 10,
+    "type": "Groupe"
+  },
+  "participations": [
+    {
+      "chienId": {
+        "$oid": "665d660575e75d02ac309cd4"
+      },
+      "avecProprietaire": false
+    },
+    {
+      "chienId": {
+        "$oid": "665d660575e75d02ac309cd6"
+      },
+      "avecProprietaire": false
+    },
+    {
+      "chienId": {
+        "$oid": "665d660575e75d02ac309cd5"
+      },
+      "avecProprietaire": false
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "665d660575e75d02ac309ce4"
+  },
+  "date": {
+    "$date": "2024-02-15T00:00:00.000Z"
+  },
+  "dureeM": 180,
+  "moniteurId": {
+    "$oid": "665d660575e75d02ac309cda"
+  },
+  "places": 5,
+  "cours": {
+    "niveau": "Ado",
+    "tarif": 10,
+    "type": "Groupe"
+  },
+  "participations": [
+    {
+      "chienId": {
+        "$oid": "665d660575e75d02ac309cd4"
+      },
+      "avecProprietaire": true
+    },
+    {
+      "chienId": {
+        "$oid": "665d660575e75d02ac309cd6"
+      },
+      "avecProprietaire": true
+    }
+  ]
+}]

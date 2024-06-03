@@ -1,6 +1,8 @@
 <script lang="ts">
     import type { PageServerData } from './$types';
-    import { IconGenderMale, IconGenderFemale, IconPaw } from '@tabler/icons-svelte';
+    import IconGenderMale from '@tabler/icons-svelte/IconGenderMale.svelte';
+    import IconGenderFemale from '@tabler/icons-svelte/IconGenderFemale.svelte';
+    import IconPaw from '@tabler/icons-svelte/IconPaw.svelte';
     import { goto } from "$app/navigation";
 
     export let data: PageServerData;

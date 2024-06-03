@@ -1,7 +1,15 @@
 <script lang="ts">
     import { goto } from '$app/navigation';
     import type { PageServerData } from './$types';
-    import { IconMap, IconOld, IconCertificate, IconCertificateOff, IconMail, IconPhone, IconChevronLeft, IconDog, IconExternalLink } from '@tabler/icons-svelte';
+    import IconMap from '@tabler/icons-svelte/IconMap.svelte';
+    import IconOld from '@tabler/icons-svelte/IconOld.svelte';
+    import IconCertificate from '@tabler/icons-svelte/IconCertificate.svelte';
+    import IconCertificateOff from '@tabler/icons-svelte/IconCertificateOff.svelte';
+    import IconMail from '@tabler/icons-svelte/IconMail.svelte';
+    import IconPhone from '@tabler/icons-svelte/IconPhone.svelte';
+    import IconChevronLeft from '@tabler/icons-svelte/IconChevronLeft.svelte';
+    import IconDog from '@tabler/icons-svelte/IconDog.svelte';
+    import IconExternalLink from '@tabler/icons-svelte/IconExternalLink.svelte';
 
     export let data: PageServerData;
     $: ({ owner, dogs } = data);
